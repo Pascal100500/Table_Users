@@ -1,4 +1,4 @@
-CREATE TABLE users (
+п»їCREATE TABLE users (
   user_id INT PRIMARY KEY IDENTITY(1, 1),
   login NVARCHAR(50) NOT NULL UNIQUE,
   password NVARCHAR(100) NOT NULL CHECK (LEN(password) >= 8),
@@ -30,7 +30,7 @@ CREATE TABLE categories
 );
 
 --*************************
---Таблица для хранения информации о складе
+--РўР°Р±Р»РёС†Р° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРєР»Р°РґРµ
 
 CREATE TABLE warehouses (
     warehouse_id INT PRIMARY KEY IDENTITY(1,1),
@@ -39,7 +39,7 @@ CREATE TABLE warehouses (
 );
 
 --*************************
---Таблица распределения остатков товаров по складам 
+--РўР°Р±Р»РёС†Р° СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ РѕСЃС‚Р°С‚РєРѕРІ С‚РѕРІР°СЂРѕРІ РїРѕ СЃРєР»Р°РґР°Рј 
 
 CREATE TABLE warehouse_stock (
     warehouse_id INT NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE orders (
 );
 
 --*************************
---Изменения с учетом привязки к складам warehouse_id
+--РР·РјРµРЅРµРЅРёСЏ СЃ СѓС‡РµС‚РѕРј РїСЂРёРІСЏР·РєРё Рє СЃРєР»Р°РґР°Рј warehouse_id
 
 CREATE TABLE orders_products (
     order_product_id INT PRIMARY KEY IDENTITY(1, 1),
