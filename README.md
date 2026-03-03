@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
 
     Categories ||--o{ Games : has
@@ -12,3 +13,4 @@ erDiagram
     AspNetUsers ||--o{ AspNetUserClaims : has
     AspNetUsers ||--o{ AspNetUserLogins : has
     AspNetUsers ||--o{ AspNetUserTokens : has
+```
