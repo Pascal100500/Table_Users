@@ -1,3 +1,7 @@
+### ER Diagramma V1.4.1
+На этой диаграмме представлена ​​структура базы данных GamePortal v1.4.1,
+включая бизнес-сущности и схему ASP.NET Core Identity.
+
 ```mermaid
 erDiagram
 
