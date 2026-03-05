@@ -39,6 +39,46 @@ erDiagram
     AspNetUsers ||--o{ AspNetUserTokens : has
 ```
 
+Бизнес - логика
+```mermaid
+erDiagram
+
+    Categories ||--o{ Games : has
+    Games ||--o{ CartItems : added_to
+    Games ||--o{ Purchases : purchased
+    AspNetUsers ||--o{ CartItems : owns
+    AspNetUsers ||--o{ Purchases : makes
+```
+
+Identity
+
+```mermaid
+erDiagram
+
+    AspNetRoles ||--o{ AspNetRoleClaims : contains
+    AspNetRoles ||--o{ AspNetUserRoles : assigned
+    AspNetUsers ||--o{ AspNetUserRoles : has
+    AspNetUsers ||--o{ AspNetUserClaims : has
+    AspNetUsers ||--o{ AspNetUserLogins : has
+    AspNetUsers ||--o{ AspNetUserTokens : has
+```
+
+Новости
+
+```mermaid
+erDiagram
+
+News {
+        int Id
+        string Title
+        string Content
+        string ImageUrl
+        datetime CreatedAt
+        bool IsPublished
+    }
+```
+
+
 ### Game Purchase Flow
 Диаграмма того, как происходит процесс покупки игры пользователем
 
@@ -74,7 +114,6 @@ I --> J
 
 J --> K
 
----
 ```
 
 Более подробно о версии 1.0
