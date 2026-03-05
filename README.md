@@ -39,6 +39,44 @@ erDiagram
     AspNetUsers ||--o{ AspNetUserTokens : has
 ```
 
+### Game Purchase Flow
+Диаграмма того, как происходит процесс покупки игры пользователем
+
+```mermaid
+flowchart TD
+
+A[User opens game page]
+B{Game already purchased?}
+C[Show "Purchased"]
+D[Add game to cart]
+E[Open Cart page]
+F{Game available?}
+G[Show "Unavailable"]
+H[Checkout]
+I[Create Purchase record]
+J[Remove item from Cart]
+K[Show success message]
+
+A --> B
+
+B -- Yes --> C
+B -- No --> D
+
+D --> E
+E --> F
+
+F -- No --> G
+F -- Yes --> H
+
+H --> I
+
+I --> J
+
+J --> K
+
+---
+```
+
 Более подробно о версии 1.0
 
  1) Добавлены сущности для работы:
