@@ -87,11 +87,11 @@ flowchart TD
 
 A[User opens game page]
 B{Game already purchased?}
-C[Show "Purchased"]
+C[Show Purchased]
 D[Add game to cart]
 E[Open Cart page]
 F{Game available?}
-G[Show "Unavailable"]
+G[Show Unavailable]
 H[Checkout]
 I[Create Purchase record]
 J[Remove item from Cart]
